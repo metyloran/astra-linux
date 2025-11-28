@@ -1,0 +1,146 @@
+html {
+  scroll-behavior: smooth;
+}
+a.mPS2id-highlight{ 
+    background: rgb(0, 183, 255); 
+}
+a:hover{
+    background-position: 0 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+   background-image: url(black-hole-6274731_1920.jpg);
+    background-size: cover;          /* изображение растягивается на весь экран */
+    background-repeat: no-repeat;    /* не повторяется */
+    background-position: center;     /* центрируется */
+    background-attachment: fixed;    /* остаётся на месте при прокрутке */
+    backdrop-filter: blur(5px);
+
+}
+body::before {
+    content: "";
+    position: fixed;        /* остаётся на месте при прокрутке */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55);  /* уровень затемнения: 0.3–0.6 оптимально */
+    z-index: -1;                      /* слой под контентом */
+}
+.wrapper {
+    max-width: 900px; /* ширина контента */
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+.wrapper img{
+    left: 15%;
+    position: relative;
+}
+p{
+    color: aliceblue;
+    font-size: 20px;
+}
+ol{
+    color: aliceblue;
+    font-size: 20px;
+}
+h2{
+    color: aliceblue;
+}
+h3{
+    color: floralwhite;
+}
+/* === HEADER === */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+}
+.link {
+    overflow: hidden;
+    background: linear-gradient(to right, rgb(250, 178, 240), rgb(221, 95, 211) 50%, rgb(252, 205, 252) 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 275ms ease;
+}
+.top-navigation{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    color: aliceblue;   
+    position: fixed; 
+    
+}
+.top-navigation ul li{
+    list-style: none;
+    font-size: 20px;
+}
+.mainmenu{
+    z-index: 99;
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: left;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 50vh;
+    background: rgba(0, 0, 0, 0.85); /* тёмный фон, чтобы текст был ярким */
+    color: white;
+    padding: 20px;
+}
+#text-navigation{
+    width: 300px;
+}
+#text-navigation li {
+    padding-top: 20px;
+}
+#toTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background: #333;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    display: none; /* скрыта */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.3s;
+}
+
+#toTopBtn:hover {
+    background: #555;
+}
+.info-1 a{
+    color: rgb(207, 136, 195);
+    text-decoration: none;
+}
+.info-1 a:hover{
+    overflow: hidden;
+    background: linear-gradient(to right, rgb(250, 178, 240), rgb(221, 95, 211) 50%, rgb(252, 205, 252) 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 275ms ease;
+}
